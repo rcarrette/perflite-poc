@@ -9,6 +9,7 @@
 - JRE (x64): https://www.java.com/fr/download/manual.jsp <br />
 - JDK 17 (x64): https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html <br />
 - Android Studio + Android SDK: https://developer.android.com/studio?hl=fr
+- Install ionic globally: <code>npm install -g ionic@latest</code>
 
 ### On your phone
 
@@ -25,4 +26,4 @@
 - Install dependencies: <code>npm install</code>
 - Build: <code>npm run build</code>
 - Run in your browser: <code>ionic serve</code>
-- Run on your Android phone: <code>npx cap run android</code>
+- Run on your Android phone: <code>npx cap add android</code> (only once) and <code>npx cap run android</code>
