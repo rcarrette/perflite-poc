@@ -1,0 +1,21 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content>
+        <ion-list id="inbox-list">
+          <ion-list-header>Perf lite</ion-list-header>
+          <ion-note>v1.0</ion-note>
+
+          <ion-menu-toggle auto-hide="false" *ngFor="let feature of features; let i = index">
+            <ion-item routerDirection="root" [routerLink]="[feature.url]" lines="none" detail="false" routerLinkActive="active">
+              <ion-icon aria-hidden="true" slot="start" [ios]="feature.icon + '-outline'" [md]="feature.icon + '-sharp'"></ion-icon>
+              <ion-label>{{ feature.name }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+  <label>test</label>
+</ion-app>
