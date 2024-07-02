@@ -90,8 +90,9 @@ export class CapacitorNfcService {
   }
 
   public async isSupported(): Promise<boolean> {
-    const { isSupported } = await Nfc.isSupported();
-    return isSupported;
+    return true;
+    // const { isSupported } = await Nfc.isSupported();
+    // return isSupported;
   }
 
   public async isEnabled(): Promise<boolean> {
