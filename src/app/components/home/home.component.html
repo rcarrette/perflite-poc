@@ -31,6 +31,8 @@
             </ion-input>
             <hr />
             <ion-button color="primary" (click)="login()">Sign in</ion-button>
+            <br />
+            <ion-card-title>Network status: {{ isConnected ? "Online": "Offline" }}</ion-card-title>
           </ion-card-content>
         </ion-col>
       </ion-row>

@@ -10,9 +10,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint",
-    "prebuild": "if [ \"$CI_PLATFORM\" = \"web\" ]; then node ./gen-firebase-key-json.js; fi",
-    "postbuild": "if [ \"$CI_PLATFORM\" = \"web\" ]; then chmod +x ./web-deploy.sh && ./web-deploy.sh; fi"
+    "lint": "ng lint"
   },
   "private": true,
   "dependencies": {
