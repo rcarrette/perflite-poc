@@ -14,27 +14,7 @@
     </ion-toolbar>
   </ion-header>
 
-  <div class="diff-checker-container max-height">
-    <ion-card class="max-height">
-      <div>
-        <textarea class="text-pane" [(ngModel)]="leftText"></textarea>
-        &nbsp;
-        <textarea class="text-pane" [(ngModel)]="rightText"></textarea>
-      </div>
-      @if (leftText != rightText) {
-      <h3>Side by side diff</h3>
-      <ngx-side-by-side-diff class="ngx-diff-dark-theme" [before]="leftText" [after]="rightText"
-        [lineContextSize]="4"
-        style="height: 100%" />
-
-      <h3>Merged text</h3>
-      <ngx-unified-diff class="ngx-diff-dark-theme" [before]="leftText" [after]="rightText" [lineContextSize]="4"
-      style="height: 100%" />
-      }
-      @else {
-      <h3>Merged text</h3>
-      <pre>{{ leftText }}</pre>
-      }
+    <ion-card>
+      {{ differences | json }}
     </ion-card>
-  </div>
 </ion-content>
