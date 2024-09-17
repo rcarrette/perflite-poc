@@ -9,6 +9,7 @@ export class AppComponent {
     { name: 'Home', url: '/', icon: 'home' },
     { name: 'Contributors', url: '/contributors', icon: 'people' },
     { name: 'Scanner (capawesome)', url: '/scanner-capawesome', icon: 'scan' },
+    { name: 'Diff checker', url: '/diff-checker', icon: 'document' },
     { name: 'Settings', url: '/settings', icon: 'settings' }
   ];
   constructor() {}

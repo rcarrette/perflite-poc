@@ -32,8 +32,10 @@
     "@capawesome-team/capacitor-nfc": "^6.2.0",
     "@ionic/angular": "^8.0.0",
     "@ngneat/until-destroy": "^10.0.0",
+    "diff-match-patch-ts": "^0.6.0",
     "firebase-tools": "^13.12.0",
     "ionicons": "^7.0.0",
+    "ngx-diff": "^9.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"

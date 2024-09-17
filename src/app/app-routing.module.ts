@@ -5,6 +5,7 @@ import { ContributorsComponent } from './components/contributors/contributors.co
 import { HomeComponent } from './components/home/home.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { ScannerCapawesomeComponent } from './components/scanner-capawesome/scanner-capawesome.component';
+import { DiffCheckerComponent } from './components/diff-checker/diff-checker.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'scanner-capawesome',
     component: ScannerCapawesomeComponent
+  },
+  {
+    path: 'diff-checker',
+    component: DiffCheckerComponent
   }
 ];
 

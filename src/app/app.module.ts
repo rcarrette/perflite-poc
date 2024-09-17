@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { RouteReuseStrategy } from '@angular/router';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
@@ -10,6 +11,8 @@ import { ContributorsComponent } from './components/contributors/contributors.co
 import { HomeComponent } from './components/home/home.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { ScannerCapawesomeComponent } from './components/scanner-capawesome/scanner-capawesome.component';
+import { DiffCheckerComponent } from './components/diff-checker/diff-checker.component';
+import { SideBySideDiffComponent, UnifiedDiffComponent } from 'ngx-diff';
 
 @NgModule({
   declarations: [
@@ -17,9 +20,10 @@ import { ScannerCapawesomeComponent } from './components/scanner-capawesome/scan
     HomeComponent,
     ContributorsComponent,
     SettingsComponent,
-    ScannerCapawesomeComponent
+    ScannerCapawesomeComponent,
+    DiffCheckerComponent
   ],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, FormsModule, IonicModule.forRoot(), AppRoutingModule, SideBySideDiffComponent, UnifiedDiffComponent],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
