@@ -14,8 +14,7 @@ interface Difference {
 })
 export class DiffCheckerComponent implements OnInit {
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   obj1 = {
     name: 'John',
@@ -24,7 +23,11 @@ export class DiffCheckerComponent implements OnInit {
       street: '123 Main St',
       city: 'Anytown',
       state: 'CA',
-      zip: '12345'
+      zip: '12345',
+      test: {
+        prop1: "zzz",
+        prop2: "yyy"
+      }
     }
   };
 
@@ -35,7 +38,11 @@ export class DiffCheckerComponent implements OnInit {
       street: '123 Main St',
       city: 'Anytown',
       state: 'NY',
-      zip: '12345'
+      zip: '12345',
+        test: {
+          prop1: "xxx",
+          prop2: "yyy"
+        }
     }
   };
 
@@ -60,7 +67,7 @@ export class DiffCheckerComponent implements OnInit {
         }
       }, {});
 
-      // Check for keys that exist in obj2 but not in obj1
+      // check les clés qui existent dans obj2 mais pas dans obj1
       _.transform(obj2, (result: any, value: any, key: any) => {
         const fullPath = currentPath ? `${currentPath}.${key}` : key;
         if (!_.has(obj1, key)) {
