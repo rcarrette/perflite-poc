@@ -4,26 +4,27 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
-    "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,
+    "noImplicitAny": false,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
-    "experimentalDecorators": true,
     "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
     "importHelpers": true,
-    "target": "es2022",
-    "module": "es2020",
-    "lib": [
-      "es2018", 
-      "dom"
-    ],
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["es2018", "dom"],
     "useDefineForClassFields": false,
+    "experimentalDecorators": true, //For DB ORM decorators
+    "emitDecoratorMetadata": true, //For DB ORM decorators
     "strictPropertyInitialization": false
   },
   "angularCompilerOptions": {
