@@ -26,34 +26,39 @@ export class OrmService {
       // Loop through your DataSources
       for (const dataSource of [/*UserDataSource,*/ PerfliteDataSource]) {
         const database = String(dataSource.options.database);
+
         if (!dataSource.isInitialized) {
+          // console.log('before dataSource.initialize()');
+
+          // console.log(dataSource);
+
           // initialize DataSource
           await dataSource.initialize();
 
-          console.log(`*** dataSource has been initialized ***`)
-          
+          // console.log(`*** dataSource has been initialized ***`)
+
           // run the migrations
           await dataSource.runMigrations();
 
-          console.log(`*** dataSource runMigration has been run succesfully ***`)
+          // console.log(`*** dataSource runMigration has been run succesfully ***`)
 
           // load data for this datasource
-          if (database.includes('contributor')) {
-            this.contributorService.database = database;
-            this.contributorService.dataSource = dataSource;
+          // if (database.includes('contributor')) {
+          this.contributorService.database = database;
+          this.contributorService.dataSource = dataSource;
 
-            await this.contributorService.initialize();
+          await this.contributorService.initialize();
 
-            console.log(`*** contributorService has been initialized ***`)
-          }
+          // console.log(`*** contributorService has been initialized ***`)
+          // }
           if (this.sqliteService.getPlatform() === 'web') {
             // save the databases from memory to store
             await this.sqliteService.getSqliteConnection().saveToStore(database);
-            console.log(`*** inORMService saveToStore ***`)
+            // console.log(`*** inORMService saveToStore ***`)
           }
         }
 
-        console.log(`DataSource: ${database} initialized`);
+        // console.log(`DataSource: ${database} initialized`);
       }
 
       this.isOrmService = true;
